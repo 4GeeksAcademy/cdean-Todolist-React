@@ -24,7 +24,7 @@ function suprimir(index) {
 return (
     <div className="text-center">
         <h1>ToDo List</h1>
-        <ul className="list-group w-25 mx-auto">
+        <ul className="list-group w-25 mx-auto shadow p-3 mb-5">
             <li className="list-group-item">
                 <input className="form-control" value={itemList} onChange={handleInput} onKeyDown={agregar} type="text" placeholder="Escribe la tarea" aria-label="default input example"/>
             </li>
@@ -33,7 +33,7 @@ return (
             <span className="badge rounded-pill" onClick={function() {suprimir(index)}}>X</span>
             </li>
             )}
-            <li class="list-group-item">{todoList.length + " items left"}</li>
+            <li class="list-group-item">{todoList.length === 0 ? "No hay tareas pendientes, agregar tarea" : todoList.length + " items left"}</li>
         </ul>
 	</div>
 )
